@@ -11,6 +11,7 @@ import imgE from '../exerciseImages/imgE.jpg';
 import imgF from '../exerciseImages/imgF.jpg';
 import imgG from '../exerciseImages/imgG.jpg';
 import imgH from '../exerciseImages/imgH.jpg';
+import imgClaudiaMario from '../exerciseImages/imgClaudiaMario.jpg';
 
 // Importar imágenes de GeoGebra
 import graficaEjercicio2 from '../geoGeebraImages/graficaEjercicio2.png';
@@ -26,14 +27,130 @@ import graficaEjercicioH from '../geoGeebraImages/graficaEjercicioH.png';
 
 function Home({ onNavigate }) {
   const ejerciciosAnaliticos = [
-    { literal: 'A', imagen: imgA, grafica: graficaEjercicioA },
-    { literal: 'B', imagen: imgB, grafica: graficaEjercicioB },
-    { literal: 'C', imagen: imgC, grafica: graficaEjercicioC },
-    { literal: 'D', imagen: imgD, grafica: graficaEjercicioD },
-    { literal: 'E', imagen: imgE, grafica: graficaEjercicioE },
-    { literal: 'F', imagen: imgF, grafica: graficaEjercicioF },
-    { literal: 'G', imagen: imgG, grafica: graficaEjercicioG },
-    { literal: 'H', imagen: imgH, grafica: graficaEjercicioH }
+    { 
+      literal: 'A', 
+      imagen: imgA, 
+      grafica: graficaEjercicioA,
+      descripcion: {
+        title: "🔍 Explicación del Proceso - Ejercicio A",
+        content: [
+          "Para resolver el límite, se aplicó el principio de sustitución directa. Este método es válido porque la función es continua en el punto al que tiende x (es decir, x=4), y el denominador no se convierte en cero al sustituir el valor.",
+          "1️⃣ Se reemplazó cada x en la función por el número 4.",
+          "2️⃣ Se realizaron las operaciones aritméticas tanto en el numerador como en el denominador.",
+          "3️⃣ En el numerador: 2(4) + 1 = 8 + 1 = 9.",
+          "4️⃣ En el denominador: √4 + 2 = 2 + 2 = 4.",
+          "5️⃣ El resultado final es la fracción 9/4."
+        ]
+      }
+    },
+    { 
+      literal: 'B', 
+      imagen: imgB, 
+      grafica: graficaEjercicioB,
+      descripcion: {
+        title: "🎯 Explicación del Proceso - Ejercicio B",
+        content: [
+          "1️⃣ Inicialmente, se intentó resolver el límite por sustitución directa, lo que resultó en la forma indeterminada 0/0. Esto indica que se debe simplificar la función para encontrar el límite.",
+          "2️⃣ Para eliminar la indeterminación, se procedió a factorizar tanto el numerador como el denominador.",
+          "3️⃣ En el numerador, primero se extrajo el factor común 2, y luego se factorizó la diferencia de cubos (x³ - 27).",
+          "4️⃣ En el denominador, se factorizó la diferencia de cuadrados (x² - 9).",
+          "5️⃣ Se canceló el término común (x - 3) que causaba la indeterminación en el numerador y el denominador.",
+          "6️⃣ Finalmente, se aplicó la sustitución directa en la expresión ya simplificada, reemplazando x por 3, lo que dio como resultado final 9. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'C', 
+      imagen: imgC, 
+      grafica: graficaEjercicioC,
+      descripcion: {
+        title: "📐 Explicación del Proceso - Ejercicio C",
+        content: [
+          "1️⃣ Al evaluar el límite por sustitución directa, se obtiene la forma indeterminada 0/0. 🚫",
+          "2️⃣ Para resolver la indeterminación, se utiliza la técnica de racionalización. Se multiplica el numerador y el denominador por el conjugado del denominador, que es (1+√(x+1)).",
+          "3️⃣ Al multiplicar los denominadores, se obtiene una diferencia de cuadrados que se simplifica a -x.",
+          "4️⃣ Esto permite cancelar el factor (-x) que aparece tanto en el numerador como en el denominador, el cual era la causa de la indeterminación.",
+          "5️⃣ Con la expresión simplificada 1+√(x+1), se vuelve a aplicar la sustitución directa con x=0, lo que da como resultado 1+1=2. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'D', 
+      imagen: imgD, 
+      grafica: graficaEjercicioD,
+      descripcion: {
+        title: "🔧 Explicación del Proceso - Ejercicio D",
+        content: [
+          "1️⃣ El límite se evaluó primero por sustitución directa, reemplazando la x por 2. Esto llevó a la forma indeterminada 0/0, lo que significa que se necesita simplificar la expresión. 🚫",
+          "2️⃣ Para resolver la indeterminación, se aplicó la técnica de racionalización, multiplicando el numerador y el denominador por el conjugado del denominador, que es (3+√(x²+5)).",
+          "3️⃣ Al multiplicar los denominadores se obtiene una diferencia de cuadrados: (3)² - (√(x²+5))², que se simplifica a 9 - (x²+5) = 4 - x².",
+          "4️⃣ Esto permitió cancelar el factor común (4-x²) del numerador y del denominador, eliminando así la indeterminación.",
+          "5️⃣ Finalmente, se aplicó la sustitución directa a la expresión simplificada (3+√(x²+5)), dando como resultado 3+3=6. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'E', 
+      imagen: imgE, 
+      grafica: graficaEjercicioE,
+      descripcion: {
+        title: "🎲 Explicación del Proceso - Ejercicio E",
+        content: [
+          "1️⃣ Para resolver este límite, se utilizaron las propiedades de los límites y el método de sustitución directa.",
+          "2️⃣ Primero, se evaluó el límite de la base de la potencia, ya que la función es continua en x=2 (el denominador no se hace cero). Se sustituyó la x por 2 en la fracción (x-1)/(2x-5).",
+          "3️⃣ La sustitución dio como resultado (2-1)/(4-5) = 1/(-1) = -1.",
+          "4️⃣ Finalmente, este resultado se eleva a la potencia indicada en el límite, que es 3. El cálculo es (-1)³ = -1, lo que da la respuesta final. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'F', 
+      imagen: imgF, 
+      grafica: graficaEjercicioF,
+      descripcion: {
+        title: "⚙️ Explicación del Proceso - Ejercicio F",
+        content: [
+          "1️⃣ Al intentar resolver el límite por sustitución directa, se llega a la forma indeterminada 0/0. 🚫",
+          "2️⃣ Para resolver la indeterminación, se procede a factorizar el polinomio del numerador y del denominador.",
+          "3️⃣ El numerador (x²+x-6) se factoriza como (x+3)(x-2).",
+          "4️⃣ El denominador (x²-4), una diferencia de cuadrados, se factoriza como (x-2)(x+2).",
+          "5️⃣ Se cancela el factor común (x-2) que causaba la indeterminación.",
+          "6️⃣ Finalmente, se aplica la sustitución directa en la expresión simplificada (x+3)/(x+2), lo que da el resultado final de 5/4. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'G', 
+      imagen: imgG, 
+      grafica: graficaEjercicioG,
+      descripcion: {
+        title: "🌟 Explicación del Proceso - Ejercicio G",
+        content: [
+          "1️⃣ El cálculo del límite por sustitución directa da como resultado la forma indeterminada 0/0. 🚫",
+          "2️⃣ Para resolverlo, se racionaliza el numerador, multiplicando arriba y abajo por su conjugado, que es (√(12+4x)+√12).",
+          "3️⃣ Esta operación simplifica el numerador a (12+4x) - 12 = 4x.",
+          "4️⃣ Se cancela la x del numerador con la x del denominador, eliminando así la indeterminación.",
+          "5️⃣ En la expresión resultante, 4/(√(12+4x)+√12), se sustituye x por 0, quedando 4/(√12+√12).",
+          "6️⃣ Esto se simplifica a 4/(2√12) o 4/(4√3), que es igual a 1/√3.",
+          "7️⃣ Finalmente, se racionaliza este último resultado para obtener la respuesta final de √3/3. ✅"
+        ]
+      }
+    },
+    { 
+      literal: 'H', 
+      imagen: imgH, 
+      grafica: graficaEjercicioH,
+      descripcion: {
+        title: "🎪 Explicación del Proceso - Ejercicio H",
+        content: [
+          "1️⃣ Al intentar resolver el límite por sustitución directa, se obtiene la forma indeterminada 0/0. 🚫",
+          "2️⃣ Para eliminar la indeterminación, se racionaliza la expresión multiplicando el numerador y el denominador por el conjugado del denominador, que es (3+√(x²-16)).",
+          "3️⃣ Al realizar la multiplicación en el denominador, se obtiene una diferencia de cuadrados que se simplifica a 9 - (x² - 16) = 25 - x².",
+          "4️⃣ Esto permite cancelar el factor común (25-x²) tanto en el numerador como en el denominador.",
+          "5️⃣ Finalmente, se aplica la sustitución directa en la expresión ya simplificada, 3+√(x²-16), lo que da como resultado 3+3=6. ✅"
+        ]
+      }
+    }
   ];
 
   return (
@@ -261,6 +378,18 @@ function Home({ onNavigate }) {
                     />
                   </div>
                   
+                  {/* Descripción del ejercicio */}
+                  <div className="description-container">
+                    <h4 className="description-title">{ejercicio.descripcion.title}</h4>
+                    <div className="description-content">
+                      {ejercicio.descripcion.content.map((paragraph, idx) => (
+                        <p key={idx} className="description-paragraph">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <div className="graph-container">
                     <h4>Gráfica:</h4>
                     <img 
@@ -272,6 +401,56 @@ function Home({ onNavigate }) {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Ejercicio Mario y Claudia */}
+        <section className="exercise-section">
+          <h2 className="section-title">
+            <span className="section-number">5</span>
+            Ejercicio Mario y Claudia
+          </h2>
+          
+          <div className="exercise-content">
+            <div className="analytical-exercise mario-claudia-exercise">
+              <h3 className="exercise-label">🎭 Ejercicio Especial - Mario y Claudia</h3>
+              
+              <div className="exercise-images">
+                <div className="resolution-container">
+                  <h4>Resolución:</h4>
+                  <img 
+                    src={imgClaudiaMario} 
+                    alt="Resolución del Ejercicio Mario y Claudia" 
+                    className="resolution-image" 
+                  />
+                </div>
+                
+                {/* Descripción del ejercicio Mario y Claudia */}
+                <div className="description-container">
+                  <h4 className="description-title">🎪 Explicación del Proceso - Ejercicio Mario y Claudia</h4>
+                  <div className="description-content">
+                    <p className="description-paragraph">
+                      Este ejercicio resuelve el límite de la función v(t) cuando t tiende a 1.
+                    </p>
+                    <p className="description-paragraph">
+                      1️⃣ La sustitución directa de t=1 en la función original daría la forma indeterminada 0/0. 🚫
+                    </p>
+                    <p className="description-paragraph">
+                      2️⃣ Para resolver la indeterminación, se racionaliza el numerador, multiplicando la parte de arriba y la de abajo de la fracción por el conjugado del numerador, que es (√(t+3)+2).
+                    </p>
+                    <p className="description-paragraph">
+                      3️⃣ Al hacer esto, el numerador se simplifica a (t+3)-4, que es igual a (t-1).
+                    </p>
+                    <p className="description-paragraph">
+                      4️⃣ Esto permite cancelar el factor (t-1) que se encuentra tanto en el numerador como en el denominador, eliminando así la indeterminación.
+                    </p>
+                    <p className="description-paragraph">
+                      5️⃣ Finalmente, se sustituye t=1 en la expresión simplificada, 1/(√(t+3)+2), lo que da como resultado 1/4. ✅
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

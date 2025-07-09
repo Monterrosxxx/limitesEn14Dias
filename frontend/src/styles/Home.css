@@ -459,6 +459,89 @@
   border: 1px solid #dee2e6;
 }
 
+/* Nuevos estilos para las descripciones */
+.description-container {
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid #dee2e6;
+  margin: 1rem 0;
+}
+
+.description-title {
+  font-size: 1.3rem;
+  color: #495057;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description-paragraph {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.description-paragraph:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ejercicio Mario y Claudia especial */
+.mario-claudia-exercise {
+  background: linear-gradient(145deg, #fff3cd, #ffeaa7) !important;
+  border: 2px solid #f39c12 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.mario-claudia-exercise::before {
+  content: '🎭✨';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.mario-claudia-exercise .exercise-label {
+  background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4) !important;
+}
+
+.mario-claudia-exercise .description-title {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mario-claudia-exercise .description-paragraph {
+  border-left: 4px solid #f39c12;
+}
+
 /* Footer */
 .footer {
   background: linear-gradient(135deg, #2d3748, #4a5568);
@@ -567,6 +650,19 @@
   .tabular-table td {
     padding: 0.5rem;
   }
+  
+  .description-container {
+    padding: 1.5rem;
+  }
+  
+  .description-title {
+    font-size: 1.1rem;
+  }
+  
+  .description-paragraph {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -622,5 +718,19 @@
   .back-button {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+  }
+  
+  .description-container {
+    padding: 1rem;
+  }
+  
+  .description-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description-paragraph {
+    padding: 0.7rem;
+    font-size: 0.9rem;
   }
 }
